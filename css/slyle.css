@@ -263,8 +263,8 @@ margin-left: auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition:visibility  250ms var(--timing-function),
    opacity  250ms var(--timing-function);
-
-
+z-index: 7;
+   /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .backdrop.is-hidden {
@@ -289,9 +289,6 @@ backdrop.is-hidden .modal{
   height: 581px;
   
   background-color: #fff;
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .close-btn {
@@ -538,9 +535,6 @@ background-image: url(/images/principle1.svg);
   width: 44px;
   height: 44px;
   transition: background-color  250ms var(--timing-function);
-
-  
-  fill: #fff;
 }
 
 .actions-link:hover,
@@ -551,7 +545,6 @@ background-image: url(/images/principle1.svg);
 .actions-link:hover .actions-icon ,
 .actions-link:focus .actions-icon {
 fill: var(--white-color);
-transition: fill  250ms var(--timing-function);  
 }
 
 
@@ -559,6 +552,8 @@ transition: fill  250ms var(--timing-function);
   width: 20px;
   height: 20px;
   fill: var(--actions-color);
+  transition: fill  250ms var(--timing-function);  
+
 }
 
 
@@ -629,7 +624,7 @@ transition: fill  250ms var(--timing-function);
   fill:  var(--actions-color);
   width: 106px;
   height: 60px;
-  transition:fill 250ms var(--timing-function),
+  transition:fill 250ms var(--timing-function);
 }
 
 /* --------------  clients  --------------- */
@@ -660,7 +655,9 @@ transition: fill  250ms var(--timing-function);
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function)
+  color 250ms var(--timing-function),
+  box-shadow 250ms var(--timing-function);
 }
 
 .filter-btn:hover,
@@ -695,9 +692,7 @@ transition: fill  250ms var(--timing-function);
 
 .portfolio-link{
   display: block;
-  transition:background-color  250ms var(--timing-function),
-  color 250ms var(--timing-function),
-  box-shadow 250ms var(--timing-function);
+  transition: box-shadow 250ms var(--timing-function);
 
 }
 
